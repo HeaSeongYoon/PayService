@@ -7,13 +7,22 @@ public class PayResponse {
    PayResult payResult;
 
    // 결제 성공 금액
+    Integer paidAmount;
+
+    @Override
+    public String toString() {
+        return "PayResponse{" +
+                "payResult=" + payResult +
+                ", paidAmount=" + paidAmount +
+                '}';
+    }
 
     public PayResponse(PayResult payResult, Integer paidAmount) {
         this.payResult = payResult;
         this.paidAmount = paidAmount;
     }
 
-    Integer paidAmount;
+
 
     public PayResult getPayResult() {
         return payResult;
